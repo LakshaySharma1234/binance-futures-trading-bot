@@ -1,12 +1,8 @@
 import logging
-import sys
 
 def setup_logging():
     logging.basicConfig(
+        filename="bot.log",
         level=logging.INFO,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-        handlers=[
-            logging.FileHandler("bot.log"),
-            logging.StreamHandler(sys.stdout)
-        ]
+        format="%(asctime)s - %(levelname)s - %(message)s"
     )

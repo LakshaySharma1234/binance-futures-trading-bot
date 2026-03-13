@@ -29,7 +29,7 @@ def main():
 
         client = get_client()
 
-        print("\n📌 Order Request Summary")
+        print("\n Order Request Summary")
         print(vars(args))
 
         order = place_order(
@@ -41,16 +41,16 @@ def main():
             price=args.price
         )
 
-        print("\n✅ Order Response")
+        print("\n Order Response")
         print(f"Order ID: {order.get('orderId')}")
         print(f"Status: {order.get('status')}")
         print(f"Executed Qty: {order.get('executedQty')}")
         print(f"Avg Price: {order.get('avgPrice')}")
 
-        print("\n🎉 SUCCESS")
+        print("\n SUCCESS")
 
     except Exception as e:
-        print(f"\n❌ FAILED: {e}")
+        print(f"\n FAILED: {e}")
         logging.error(f"CLI Failure: {e}")
 
 if __name__ == "__main__":
